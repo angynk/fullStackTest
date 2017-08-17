@@ -1,0 +1,65 @@
+<div ng-controller="listController" class="container">
+</br>	
+
+	<h2>Pending Tasks</h2>
+	<div class="panel panel-default">
+	<div class="panel-body">
+		<table class="table">
+		<thead>
+			<tr>
+			<th>
+			 <button class="btn btn-outline-success" ng-click="sortBy('name')">Name</button>
+			 <span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
+			 </th>
+			<th>
+			 <button  class="btn btn-outline-success" ng-click="sortBy('dueDate')">DueDate</button>
+			 <span class="sortorder" ng-show="propertyName === 'dueDate'" ng-class="{reverse: reverse}"></span>
+			</th>
+			<th>
+				<button class="btn btn-outline-success" ng-click="sortBy('priority')">Priority</button>
+			    <span class="sortorder" ng-show="propertyName === 'priority'" ng-class="{reverse: reverse}"></span>
+			</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="task in pendingList | orderBy:propertyName:reverse">
+				<td>{{task.name}}</td>
+				<td>{{task.dueDate}}</td>
+				<td>{{task.priority}}</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</div>
+	</br>
+	<h2>OverDue Tasks</h2>
+	<div class="panel panel-default">
+	<div class="panel-body">
+		<table class="table">
+		<thead>
+			<tr>
+			<th>
+			 <button class="btn btn-outline-success" ng-click="sortBy('name')">Name</button>
+			 <span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
+			 </th>
+			<th>
+			 <button class="btn btn-outline-success" ng-click="sortBy('dueDate')">DueDate</button>
+			 <span class="sortorder" ng-show="propertyName === 'dueDate'" ng-class="{reverse: reverse}"></span>
+			</th>
+			<th>
+				<button class="btn btn-outline-success" ng-click="sortBy('priority')">Priority</button>
+			    <span class="sortorder" ng-show="propertyName === 'priority'" ng-class="{reverse: reverse}"></span>
+			</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="task in overdueList">
+				<td>{{task.name}}</td>
+				<td>{{task.dueDate}}</td>
+				<td>{{task.priority}}</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</div>
+</div>

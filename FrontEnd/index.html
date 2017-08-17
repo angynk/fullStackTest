@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="taskApp">
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/taskApp.css">
+	<title>Task App</title>
+</head>
+<body>
+<header >
+<figure class="logo">
+ <img src="img/logo.png" alt="rokk3rlabs">
+ </figure>
+  <nav ><ul>
+    <li ><a href="#">Home</a></li>
+    <li><a href="/tasks">CRUD Tasks</a></li>
+    <li><a href="/tasksList">Tasks List</a></li>
+  </ul></nav>
+ 
+</header>
+<div class="container">
+<h1>Just Test</h1>
+<div ui-view></div>
+</div>
+<script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+<script src="controller/MainController.js"></script>
+<script src="controller/TaskController.js"></script>
+<script src="controller/TaskListController.js"></script>
+<script src="controller/Routes.js"></script>
+
+</body>
+</html>

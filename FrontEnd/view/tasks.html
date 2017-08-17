@@ -1,0 +1,34 @@
+<div ng-controller="taskController" class="container">
+	<h2>CRUD Tasks</h2>
+	<div class="panel panel-default">
+	<div class="panel-body">
+		<table class="table">
+		<thead>
+			<tr>
+			<th>Name</th>
+			<th>Due Date</th>
+			<th>Priority</th>
+			<th>Edit</th>
+			<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td><input class="form-control" ng-model="task.name"></td>
+		<td><input class="form-control" type="date" ng-model="task.dueDate"></td>
+		<td><input class="form-control" ng-model="task.priority"></td>
+		<td><button class="btn btn-dark" ng-click="addTask()">Add Task</button>
+		<td><button class="btn btn btn-success" ng-click="update()">Update</button>
+		</tr>
+			<tr ng-repeat="task in taskList">
+				<td>{{task.name}}</td>
+				<td>{{task.dueDate}}</td>
+				<td>{{task.priority}}</td>
+				<td><button class="btn btn-danger" ng-click="remove(task._id)">Remove</button>
+				<td><button class="btn btn-warning" ng-click="edit(task._id)">Edit</button>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</div>
+</div>
