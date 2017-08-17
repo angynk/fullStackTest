@@ -25,8 +25,12 @@ Installation:
 
 REST API:
 
-GET /task
-GET /task/:id
-POST /task/create
-PUT /task/update/:id
-DELETE /task/:id
+    GET /task
+
+    GET /task/:id
+
+    POST /task/create
+
+    PUT /task/update/:id
+
+    DELETE /task/:id
