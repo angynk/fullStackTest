@@ -1,4 +1,4 @@
-# fullStackTest
+# FullStackTest - Rokk3rLabs
 
 Installation:
 
@@ -16,6 +16,7 @@ Installation:
 3 - Start your mongodb application
 
 4 - Start the application
+
     node server
 
 5 - Go to the following URL:

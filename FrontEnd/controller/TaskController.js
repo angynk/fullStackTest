@@ -17,9 +17,12 @@ appAngular.controller('taskController', ['$scope','$http', function($scope,$http
     
 	$scope.addTask = function(){
 
-		$http.post('/task/create', $scope.task ).then(function(response){
-			refresh();
-		});
+        $http.post('/task/create', $scope.task ).then(function(response){
+            refresh();
+        },function(error){
+            console.log(error);
+            $scope.message = error.data.errors;
+        } );
 
 	};
 
